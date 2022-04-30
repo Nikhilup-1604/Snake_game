@@ -45,6 +45,24 @@ function gameEngine(){
         score= 0;
     }
 
+    //if you have eaten the food, increment the score and regenerate the food
+
+    if(snakeArr[0].y === food.y && snakeArr[0].x === food.x){
+
+        //add new body to snake
+
+        snakeArr.unshift({x: snakeArr[0].x + inputDir.x , y: snakeArr[0].y + inputDir.y})
+
+        //add new food
+        let a = 2;
+        let b = 16; 
+        food = {x: Math.round(a + (b - a) * Math.random())} //generates random number between a an b ( 2 to 16)
+
+    }
+
+
+
+
     //PART 2: Display the snake array and food.
            //1.Display the snake
     board.innerHTML = "";
