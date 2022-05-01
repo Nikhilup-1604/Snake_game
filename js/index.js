@@ -37,7 +37,7 @@ function isCollide(sarr){
             }   
         }
         //2.If it collides to the wall.
-        if(sarr[0].x >= 18 || sarr[0].x <= 0 && sarr[0].y >= 18 || sarr[0].y <= 0){
+        if(sarr[0].x >= 18 || sarr[0].x <= 0 || sarr[0].y >= 18 || sarr[0].y <= 0){
             return true;
         } 
          
