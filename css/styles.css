@@ -55,3 +55,13 @@
     font-weight: bold;
     font-family: 'Roboto Condensed', sans-serif;
 }
+
+#highScoreBox{
+    position:absolute;
+    top:25px;
+    right:10px;
+    font-size:15px;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}

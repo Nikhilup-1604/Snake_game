@@ -63,6 +63,14 @@ function gameEngine(){
     if(snakeArr[0].y === food.y && snakeArr[0].x === food.x){
         // foodSound.play();
         score += 1;
+
+        //code for high score
+        if(score > highScoreVal){
+            highScoreVal = score;
+            localStorage.setItem("highScore",JSON.stringify(highScoreVal));
+            highScoreBox.innerHTML = "HighScore:" + highScoreVal;
+
+        }
         scoreBox.innerHTML = "Score:" + score;
         //add new body to snake
 
@@ -121,6 +129,17 @@ function gameEngine(){
 
 
  //Main Logic Goes Here
+
+ let highScore = localStorage.getItem("highScore");
+if(highScore === null){
+    highScoreVal = 0;
+    localStorage.setItem('highScore' ,JSON.stringify(highScoreVal));
+}
+
+else{
+    highScoreVal = JSON.parse(highScore);
+    highScoreBox.innerHTML = "High Score: " + highScore ;
+}
 
  window.requestAnimationFrame(main);
 
