@@ -62,6 +62,8 @@ function gameEngine(){
 
     if(snakeArr[0].y === food.y && snakeArr[0].x === food.x){
         // foodSound.play();
+        score += 1;
+        scoreBox.innerHTML = "Score:" + score;
         //add new body to snake
 
         snakeArr.unshift({x: snakeArr[0].x + inputDir.x , y: snakeArr[0].y + inputDir.y});
