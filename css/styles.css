@@ -6,7 +6,7 @@
 }
 
 .body{
-    background: url("../assests/wp2409705-snake-game-wallpapers.jpg");
+    background: url("../assests/background.jpg");
     min-height: 100vh;
     background-size: 100vw 100vh;
     display:flex;
@@ -16,7 +16,7 @@
 }
 
 #board{
-    background: linear-gradient(rgb(29, 33, 29),rgb(216, 216, 170));
+    background: linear-gradient(rgb(207, 14, 11),rgb(6, 89, 117));
     width: 90vmin;
     height: 92vmin;
     border: 2px solid rgb(115, 9, 9);
@@ -34,7 +34,7 @@
     
 }
 .snake{
-    background-color:purple;
+    background-color:rgb(17, 2, 17);
     border: .15vmin solid white;
     border-radius: 2px;
     
