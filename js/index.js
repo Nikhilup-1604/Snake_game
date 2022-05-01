@@ -6,7 +6,7 @@ let inputDir = {x:0, y:0};
 // const moveSound= new Audio('move.mp3');
 
 let score=0;
-let speed=2;
+let speed=5;
 let lastPaintTime = 0;
 let snakeArr=[
      {x:13 , y:15}
@@ -29,8 +29,19 @@ food = {x:6 , y:7};
 
 function isCollide(sarr){
     // There are two conditions when snake is collide
-       //1.If it collides to the wall.
-       //2.If it collides with itself.
+        
+        for (let index = 1; index < snakeArr.length; index++) {
+            //1.If it collides with itself.
+            if(sarr[index].x === sarr[0].x && sarr[index].y === sarr[0].y){
+                return true;
+            }   
+        }
+        //2.If it collides to the wall.
+        if(sarr[0].x >= 18 || sarr[0].x <= 0 && sarr[0].y >= 18 || sarr[0].y <= 0){
+            return true;
+        } 
+         
+
 }
 
 function gameEngine(){
